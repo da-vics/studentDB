@@ -69,7 +69,7 @@ namespace studentDB
 
         private void AddStudent_Click(object sender, RoutedEventArgs e)
         {
-            if (SelectUniversityList.SelectedValue.ToString().Length > 0 && SelectClassList.SelectedValue.ToString().Length > 0)
+            if (AddStudentFirstNameToDB.Text.Length > 0 && AddStudentLastNameToDB.Text.Length > 0)
             {
                 students.AddStudent(SelectUniversityList.SelectedValue.ToString(), SelectClassList.SelectedValue.ToString(), AddStudentFirstNameToDB.Text, AddStudentLastNameToDB.Text);
                 ShowAllStudentsList.ItemsSource = students.displayAllStudents();
