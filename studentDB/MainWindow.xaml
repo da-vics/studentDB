@@ -1,0 +1,140 @@
+﻿<Window x:Class="studentDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:studentDB"
+        mc:Ignorable="d"
+        Title="Davics" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Text="DAVICSDB" FontFamily="Lucida Handwriting" VerticalAlignment="Center"
+        HorizontalAlignment="Center" FontSize="30" Foreground="SkyBlue"
+        Grid.ColumnSpan="5" Grid.Row="0">
+        </TextBlock>
+
+        <Label Margin="5" Content="List Of Students"  FontSize="15" Foreground="DarkRed" 
+         HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1" 
+         FontFamily="Lucida Handwriting">
+        </Label>
+
+        <ListBox VerticalContentAlignment="Center" Name="ShowAllStudentsList"
+         Margin="5" SelectionChanged="ShowAllStudentsList_SelectionChanged"
+         Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
+
+        <Label Margin="5" Content="Student Details" FontSize="15" Foreground="DarkRed" 
+         HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" 
+         FontFamily="Lucida Handwriting">
+        </Label>
+
+        <ListBox VerticalContentAlignment="Center" Name="ShowAllStudentsData"  
+         Margin="5" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"/>
+
+        <Button Grid.Column="0" FontSize="15" Grid.Row="5" Margin="5"
+        Content="Remove Student" Foreground="SkyBlue" Height="60" Name="RemoveStudentDB"
+        FontFamily="Lucida Handwriting" Click="RemoveStudentDB_Click">
+        </Button>
+
+
+        <StackPanel  Grid.Column="2" Grid.Row="2" Margin="5,0,5,0">
+
+            <Label Content="First Name" HorizontalAlignment="Center" 
+            Foreground="DarkRed" Margin="0,0,0,10"
+            FontSize="15" VerticalAlignment="Center" FontFamily="Lucida Handwriting">
+            </Label>
+
+            <TextBox VerticalContentAlignment="Center" Name="AddStudentFirstNameToDB"
+         Height="40">
+            </TextBox>
+
+        </StackPanel>
+
+        <StackPanel  Grid.Column="2" Grid.Row="3" Margin="5,0,5,0">
+
+            <Label Content="Last Name" HorizontalAlignment="Center" Foreground="DarkRed" Margin="0,0,0,10"
+            FontSize="15" VerticalAlignment="Center" FontFamily="Lucida Handwriting">
+            </Label>
+
+            <TextBox VerticalContentAlignment="Center" Name="AddStudentLastNameToDB"
+         Height="40">
+            </TextBox>
+
+        </StackPanel>
+
+        <!--University-->
+        <StackPanel Grid.Row="1"  Grid.RowSpan="2" Grid.Column="3" Orientation="Vertical" Margin="5,0,5,0">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="Add University" HorizontalAlignment="Center" 
+                Foreground="DarkRed"
+            FontSize="15" VerticalAlignment="Center" FontFamily="Lucida Handwriting">
+                </Label>
+
+                <ComboBox Grid.Row="1" VerticalContentAlignment="Center"
+                Name="SelectUniversityList"
+                 Margin="5">
+                </ComboBox>
+            </Grid>
+        </StackPanel>
+        <!--University-->
+
+        <!--Class-->
+        <StackPanel Grid.Row="1" Grid.RowSpan="2" Grid.Column="4" Orientation="Vertical" Margin="5,0,5,0">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="Add Class" 
+                HorizontalAlignment="Center" Foreground="DarkRed"
+            FontSize="15" VerticalAlignment="Center" FontFamily="Lucida Handwriting">
+                </Label>
+
+                <ComboBox Grid.Row="1" VerticalContentAlignment="Center" 
+                Name="SelectClassList"
+                 Margin="5">
+                </ComboBox>
+
+            </Grid>
+        </StackPanel>
+        <!--Class-->
+
+
+        <Button Grid.Column="3" Grid.ColumnSpan="2" FontSize="20" Grid.Row="5" 
+         Margin="5"
+        Content="Add Student" Foreground="SkyBlue" Height="60" Click="AddStudent_Click"
+        FontFamily="Lucida Handwriting">
+        </Button>
+
+
+    </Grid>
+</Window>
