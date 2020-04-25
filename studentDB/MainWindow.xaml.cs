@@ -78,6 +78,12 @@ namespace studentDB
             {
                 MessageBox.Show("NULL Value not allowed");
             }
+
+            SelectUniversityList.SelectedValue = null;
+            SelectClassList.SelectedValue = null;
+            AddStudentFirstNameToDB.Text = null;
+            AddStudentLastNameToDB.Text = null;
+
         }
 
         private void RemoveStudentDB_Click(object sender, RoutedEventArgs e)

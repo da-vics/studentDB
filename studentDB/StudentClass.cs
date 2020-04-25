@@ -9,7 +9,7 @@ namespace studentDB
 {
     class StudentClass
     {
-        StudentDataClasses1DataContext dataContext;
+        private StudentDataClasses1DataContext dataContext;
 
         public StudentClass(StudentDataClasses1DataContext datcon)
         {
