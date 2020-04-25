@@ -84,16 +84,16 @@ namespace studentDB
 
         public IEnumerable<string> AllUniversity()
         {
-            IEnumerable<string> unilist = from uni in dataContext.Universities
-                                          select uni.UniversityName;
+            var unilist = from uni in dataContext.Universities
+                          select uni.UniversityName;
             return unilist;
         }
 
 
         public IEnumerable<string> AllClass()
         {
-            IEnumerable<string> classlist = from classs in dataContext.Classes
-                                            select classs.ClassName;
+            var classlist = from classs in dataContext.Classes
+                            select classs.ClassName;
             return classlist;
         }
 
