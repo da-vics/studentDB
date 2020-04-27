@@ -69,12 +69,16 @@ namespace studentDB
 
         private void AddStudent_Click(object sender, RoutedEventArgs e)
         {
-            if (AddStudentFirstNameToDB.Text.Length > 0 && AddStudentLastNameToDB.Text.Length > 0)
+            try
             {
+
                 students.AddStudent(SelectUniversityList.SelectedValue.ToString(), SelectClassList.SelectedValue.ToString(), AddStudentFirstNameToDB.Text, AddStudentLastNameToDB.Text);
                 ShowAllStudentsList.ItemsSource = students.displayAllStudents();
+
             }
-            else
+
+
+            catch (Exception ex)
             {
                 MessageBox.Show("NULL Value not allowed");
             }

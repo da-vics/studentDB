@@ -102,13 +102,23 @@ namespace studentDB
         {
             try
             {
+
+                StringBuilder fist = new StringBuilder();
+                fist.Append(first_Name);
+                fist.Replace(first_Name[0], Char.ToUpper(first_Name[0]), 0, 1);
+
+                StringBuilder las = new StringBuilder();
+                las.Append(last_Name);
+                las.Replace(last_Name[0], Char.ToUpper(last_Name[0]), 0, 1);
+
+
                 var uniid = dataContext.Universities.FirstOrDefault(st => st.UniversityName == uni);
                 int universityId = uniid.Id;
 
                 var classiid = dataContext.Classes.FirstOrDefault(st => st.ClassName == clas);
                 int clasId = classiid.Id;
 
-                dataContext.Students.InsertOnSubmit(new Student { FisrtName = first_Name, LastName = last_Name, UniversityId = universityId, ClassesId = clasId });
+                dataContext.Students.InsertOnSubmit(new Student { FisrtName = fist.ToString(), LastName = las.ToString(), UniversityId = universityId, ClassesId = clasId });
                 dataContext.SubmitChanges();
             }
 
