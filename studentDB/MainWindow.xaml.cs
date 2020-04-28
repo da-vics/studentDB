@@ -79,7 +79,7 @@ namespace studentDB
 
             catch (Exception ex)
             {
-                MessageBox.Show("NULL Value not allowed");
+                MessageBox.Show(ex.Message);
             }
 
             SelectUniversityList.SelectedValue = string.Empty;
