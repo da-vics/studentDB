@@ -9,12 +9,19 @@ namespace studentDB
 {
     class StudentClass
     {
+        /// <summary>
+        /// DataContext Reference
+        /// </summary>
+        #region PrivateVariables
         private StudentDataClasses1DataContext dataContext;
+        #endregion
 
-        public StudentClass(StudentDataClasses1DataContext datcon)
-        {
-            this.dataContext = datcon;
-        }
+        /// <summary>
+        /// Default constructor
+        /// </summary>                                                                                                                                                                                                                                                          
+        /// <param name="datcon"></param>
+
+        public StudentClass(StudentDataClasses1DataContext datcon) => this.dataContext = datcon;
 
 
         public IEnumerable<string> displayAllStudents()

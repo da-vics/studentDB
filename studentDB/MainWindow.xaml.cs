@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using System.Configuration;
-using studentDB;
 
 namespace studentDB
 {
@@ -83,10 +82,10 @@ namespace studentDB
                 MessageBox.Show("NULL Value not allowed");
             }
 
-            SelectUniversityList.SelectedValue = null;
-            SelectClassList.SelectedValue = null;
-            AddStudentFirstNameToDB.Text = null;
-            AddStudentLastNameToDB.Text = null;
+            SelectUniversityList.SelectedValue = string.Empty;
+            SelectClassList.SelectedValue = string.Empty;
+            AddStudentFirstNameToDB.Text = string.Empty;
+            AddStudentLastNameToDB.Text = string.Empty;
 
         }
 
